@@ -45,6 +45,18 @@
         .content {
             margin-bottom: 20px;
         }
+        @keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .flashing-text {
+    animation: flash 1s infinite;
+  }
+
+  .orange-text {
+    color: orange;
+  }
     </style>
    
 </head>
@@ -57,7 +69,7 @@
 
         <!-- 標籤頁 -->
         <div class="menu">
-            <span><h2 style="text-shadow:6px 4px 3px orange;">請選擇</h2></span>
+            <span> <h3 class="flashing-text"; style="text-shadow:6px 4px 3px orange;">請選擇</h3></span>
             <span class="arrow">&#x21E8;</span>
             <div class="menu-item" onclick="showPage('home')">首頁</div>
             <div class="menu-item" onclick="showPage('control')">設備控制</div>
@@ -91,7 +103,7 @@
                     <body>
                         <h1>環境監測系統</h1>
                         <p>PM2.5: 13.2 μg/m<sup>3</sup></p>
-                        <p>CO2: 1170 ppm</p>
+                        <p> <span>  <h3 class="flashing-text orange-text">CO<sub>2</sub>: 1170 ppm</h3></span></p>
                         <p>警告值設定:</p>
                         <p class="blue-text">HI: 50 μg/m<sup>3</sup></p>
                         <p class="blue-text">Hi: 1000 ppm</p>
